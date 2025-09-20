@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; margin: 0; padding: 2rem; background: #fafafa; }
+    h1, h2 { margin-top: 0; }
+    .container { max-width: 768px; margin: 0 auto; background: #fff; padding: 1.5rem; border: 1px solid #e5e5e5; }
+    form { margin-top: 1rem; }
+    label { display: block; margin-top: 0.75rem; font-weight: 600; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%; padding: 0.6rem; border: 1px solid #bbb; border-radius: 4px;
+    }
+    textarea { min-height: 140px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .inline { display: inline-flex; align-items: center; gap: 0.4rem; margin-right: 1rem; }
+    button { margin-top: 1rem; padding: 0.7rem 1rem; border: 1px solid #111; background: #111; color: #fff; border-radius: 6px; cursor: pointer; }
+    button:hover { opacity: 0.9; }
+    .note { background: #f6f6ff; padding: 0.75rem; border-left: 4px solid #5850ec; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact</h1>
+
+    <p>Use the form below to get in touch. Fields marked with * are required.</p>
+
+    <form action="" method="post">
+      <div class="row">
+        <div>
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required aria-required="true" />
+        </div>
+        <div>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+        </div>
+      </div>
+
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option value="general">General</option>
+        <option value="project">Project Inquiry</option>
+        <option value="speaking">Speaking / Event</option>
+        <option value="other">Other</option>
+      </select>
+
+      <div style="margin-top:0.75rem;">
+        <span class="inline">
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
+          <label for="newsletter" style="margin:0;font-weight:500;">Subscribe me to the newsletter</label>
+        </span>
+      </div>
+
+      <fieldset style="margin-top:0.75rem; border:1px solid #bbb; border-radius:6px; padding:0.75rem;">
+        <legend style="padding:0 0.4rem;">Preferred Contact Method</legend>
+        <span class="inline">
+          <input type="radio" id="contact-email" name="contact_method" value="email" checked />
+          <label for="contact-email" style="margin:0;font-weight:500;">Email</label>
+        </span>
+        <span class="inline">
+          <input type="radio" id="contact-phone" name="contact_method" value="phone" />
+          <label for="contact-phone" style="margin:0;font-weight:500;">Phone</label>
+        </span>
+      </fieldset>
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" required aria-required="true" placeholder="How can I help?"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="note">
+      <strong>Validation:</strong> Validate this page at <a href="https://html5.validator.nu/" target="_blank" rel="noreferrer">html5.validator.nu</a> and save the result link for submission.
+    </div>
+  </div>
+</body>
+</html>
