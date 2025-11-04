@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IST 263 Lab 11 – Baseball Glove Game (Preview)</title>
+
+  <link rel="stylesheet" href="animate2.css">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8fafc;
+      margin: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .sub {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .container img {
+      width: 220px;
+      max-width: 30vw;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      border-radius: 10px;
+    }
+
+    .container img:hover {
+      transform: scale(1.08);
+    }
+
+    #message {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.1rem;
+      min-height: 2.5rem;
+      display: inline-block;
+    }
+  </style>
+
+  <script>
+    function WinnerMessage() {
+      document.getElementById("message").innerHTML =
+        '<p>🎉 Home run! You found the baseball!</p>' +
+        '<img src="images/baseball.png" alt="Baseball" style="width:90px; margin-top:10px;">';
+    }
+
+    function TryAgain() {
+      document.getElementById("message").innerHTML =
+        "⚾ Not here — try another glove!";
+    }
+
+    function ShuffleGloves() {
+      const newOrder = Math.floor((Math.random() * 3) + 2); // 2, 3, or 4
+      document.getElementById("glove1").style.order = newOrder;
+
+      const allOrders = [2, 3, 4];
+      const remaining = allOrders.filter(n => n !== newOrder);
+      document.getElementById("glove2").style.order = remaining[0];
+      document.getElementById("glove3").style.order = remaining[1];
+    }
+  </script>
+</head>
+
+<body onload="ShuffleGloves();">
+  <h1 class="pulse">Baseball Glove Game (Preview)</h1>
+  <p class="sub">Find the glove hiding the baseball! The gloves shuffle each time you reload.</p>
+
+  <div class="container">
+    <img id="glove1" src="images/glove1.png" alt="Dark brown baseball glove" onclick="WinnerMessage();">
+    <img id="glove2" src="images/glove2.png" alt="Blue baseball glove" onclick="TryAgain();">
+    <img id="glove3" src="images/glove3.png" alt="Light brown baseball glove" onclick="TryAgain();">
+  </div>
+
+  <div id="message" aria-live="polite"></div>
+</body>
+</html>

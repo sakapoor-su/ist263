@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IST 263 Lab 11 – Baseball Glove Game (Alerts)</title>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    function WinnerMessage() {
+      alert("🎉 Home Run! You found the baseball!");
+    }
+
+    function TryAgain() {
+      alert("❌ No baseball under this glove. Try again!");
+    }
+  </script>
+
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8fafc;
+      margin: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    p {
+      color: #444;
+    }
+
+    .gloves {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .gloves img {
+      width: 220px;
+      max-width: 30vw;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      border-radius: 10px;
+    }
+
+    .gloves img:hover {
+      transform: scale(1.08);
+    }
+
+    .hint {
+      color: #555;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Baseball Glove Game (Alerts)</h1>
+  <p>Try to find which glove is hiding the baseball!</p>
+
+  <div class="gloves">
+    <!-- Dark brown glove – winning one -->
+    <img src="images/glove1.png" alt="Dark brown baseball glove" onclick="WinnerMessage();">
+
+    <!-- Blue glove -->
+    <img src="images/glove2.png" alt="Blue baseball glove" onclick="TryAgain();">
+
+    <!-- Light brown glove -->
+    <img src="images/glove3.png" alt="Light brown baseball glove" onclick="TryAgain();">
+  </div>
+
+  <p class="hint">Hint: Only one glove hides the baseball 🧤⚾</p>
+</body>
+</html>
