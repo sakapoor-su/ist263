@@ -1,0 +1,19 @@
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: SeaGreen;
+}
+
+.evenrow {
+    background-color: Honeydew;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
