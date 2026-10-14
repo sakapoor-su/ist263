@@ -1,0 +1,38 @@
+/* IST 263 - Lab 07 stylesheet */
+
+/* Palette (see style document):
+   Body background   #0F172A
+   Text              #E2E8F0
+   Link              #7DD3FC
+   Heading           #FCD34D
+   Nav background    #1E293B
+   Nav highlight     #475569
+   Nav link          #F1F5F9
+*/
+
+body {
+    background-color: #0F172A;
+    color: #E2E8F0;
+  }
+  
+  a {
+    color: #7DD3FC;
+  }
+  
+  h1, h2, h3 {
+    color: #FCD34D;
+  }
+  
+  nav {
+    background-color: #1E293B;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  
+  nav a {
+    color: #F1F5F9;
+  }
+  
+  nav a:hover {
+    background-color: #475569;
+  }
