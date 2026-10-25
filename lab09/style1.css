@@ -1,0 +1,239 @@
+/* IST 263 - Lab 07 stylesheet */
+
+/* Palette (see style document):
+   Body background   #0F172A
+   Text              #E2E8F0
+   Link              #7DD3FC
+   Heading           #FCD34D
+   Nav background    #1E293B
+   Nav highlight     #475569
+   Nav link          #F1F5F9
+*/
+
+body {
+    background-color: #0F172A;
+    color: #E2E8F0;
+  }
+  
+  a {
+    color: #7DD3FC;
+  }
+  
+  h1, h2, h3 {
+    color: #FCD34D;
+  }
+  
+  nav {
+    background-color: #1E293B;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  
+  nav a {
+    color: #F1F5F9;
+  }
+  
+  nav a:hover {
+    background-color: #475569;
+  }
+/* ---------- Lab 08 ---------- */
+
+/* Floats: tagline floats right of the copyright in the footer */
+.tagline {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Flexbox: contact page, two rows with two columns each */
+.row1, .row2 {
+    display: flex;
+    margin: 30px;
+    padding: 30px;
+    background-color: #1E293B;
+    border-radius: 25px;
+}
+
+.col1 {
+    flex: 1;
+}
+
+.col2 {
+    flex: 1;
+}
+
+/* space between the two columns */
+.col1, .col2 {
+    margin: 0 20px;
+}
+
+/* form and map fill their columns */
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 6px 0 20px 0;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #FCD34D;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form div {
+    margin-bottom: 6px;
+}
+
+/* Color accents (from the site palette) */
+nav {
+    border-bottom: 3px solid #7DD3FC;
+}
+
+.row1, .row2 {
+    background-color: #334155;
+    border: 2px solid #7DD3FC;
+}
+
+.row2 {
+    border-color: #FCD34D;
+}
+
+input[type="text"], textarea {
+    border: 2px solid #7DD3FC;
+}
+
+input[type="radio"] {
+    accent-color: #FCD34D;
+}
+
+input[type="submit"]:hover {
+    background-color: #7DD3FC;
+}
+
+footer {
+    border-top: 2px solid #475569;
+}
+
+/* ---------- Bright theme (overrides earlier colors) ---------- */
+body {
+    background-color: #EFF6FF;
+    color: #1E293B;
+}
+
+a {
+    color: #1D4ED8;
+}
+
+h1, h2, h3 {
+    color: #1D4ED8;
+}
+
+nav {
+    background-color: #2563EB;
+    border-bottom: 4px solid #F97316;
+}
+
+nav a {
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    background-color: #F97316;
+}
+
+.row1 {
+    background-color: #FFFFFF;
+    border: 3px solid #2563EB;
+}
+
+.row2 {
+    background-color: #FFF7ED;
+    border: 3px solid #F97316;
+}
+
+input[type="text"], textarea {
+    border: 2px solid #2563EB;
+}
+
+input[type="radio"] {
+    accent-color: #F97316;
+}
+
+input[type="submit"] {
+    background-color: #F97316;
+    color: #FFFFFF;
+}
+
+input[type="submit"]:hover {
+    background-color: #2563EB;
+}
+
+footer {
+    border-top: 3px solid #2563EB;
+}
+
+header img {
+    border-bottom: 5px solid #F97316;
+}
+
+ul {
+    background-color: #DBEAFE;
+    border-left: 6px solid #F97316;
+}
+
+th {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+td {
+    background-color: #FFFFFF;
+}
+
+
+/* ---------- Lab 09: skills page ---------- */
+
+/* center the heading (text-align, since the heading text is inline content) */
+.skillsheading {
+    text-align: center;
+}
+
+/* flexbox row with two containers */
+.firstrow {
+    display: flex;
+    margin: 30px;
+}
+
+.skillstable, .skillsimage {
+    flex-basis: 50%;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 3px solid #2563EB;
+    border-radius: 15px;
+}
+
+/* center the table in its container (block: auto margins) */
+.skillstable table {
+    margin: 0 auto;
+}
+
+/* center the image in its container (inline: text-align) */
+.skillsimage {
+    text-align: center;
+}
+
+.skillsimage img {
+    max-width: 100%;
+}
