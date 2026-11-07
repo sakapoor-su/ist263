@@ -8,13 +8,20 @@
         function SecondBlock() {
             alert('My Second Alert');
         }
+        function hovery() {
+            alert("I'm hovering over this text");
+        }
+        function clicky() {
+            alert("I clicked on a singe word.");
+        }
     </script>    
 </head>
 
 <body>
     <script>alert('I am sending an alert!');</script>
     <h1 onclick="SecondBlock()">Header 1</h1>
-    <p></p>
+    <p onmouseover="hovery()">Content goes here</p>
+    <p>Content goes <span ondblclick="">here</span></p>
 </body>
 
 
