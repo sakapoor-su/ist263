@@ -1,0 +1,291 @@
+/* VC Decoded - IST 263 Project Milestone 6
+   Color scheme:
+   navy   #16254f  (nav, footer, headings)
+   blue   #1f4590  (links, card accents)
+   gold   #f2b134  (button, highlights)
+   light  #eef2f9  (section backgrounds)
+   text   #222222
+*/
+
+/* ---------- Page defaults ---------- */
+body {
+	margin: 0;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #222222;
+	background-color: #ffffff;
+}
+
+/* flexible images */
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3 {
+	color: #16254f;
+}
+
+h2 {
+	font-size: 28px;
+	margin-top: 0;
+}
+
+a {
+	color: #1f4590;
+}
+
+a:hover {
+	color: #16254f;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+	display: flex;
+	background-color: #16254f;
+	padding: 14px 40px;
+}
+
+.site-name {
+	flex: 1;
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+nav span {
+	color: #8fa0c8;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+
+nav a:hover {
+	background-color: #1f4590;
+	color: #ffffff;
+}
+
+.current {
+	background-color: #f2b134;
+	color: #16254f;
+	font-weight: bold;
+}
+
+/* ---------- Hero (header) ---------- */
+header {
+	display: flex;
+	background-color: #eef2f9;
+	padding: 40px;
+}
+
+.hero-text {
+	flex: 1;
+	padding-right: 40px;
+}
+
+.hero-text h1 {
+	font-size: 42px;
+}
+
+.hero-text p {
+	font-size: 18px;
+}
+
+.hero-image {
+	flex: 1;
+}
+
+.hero-image img {
+	border-radius: 10px;
+}
+
+.button {
+	display: block;
+	width: 250px;
+	text-align: center;
+	background-color: #f2b134;
+	color: #16254f;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 12px;
+	border-radius: 6px;
+}
+
+.button:hover {
+	background-color: #16254f;
+	color: #ffffff;
+}
+
+/* ---------- Main content ---------- */
+article, .intro {
+	padding: 40px;
+}
+
+.intro {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* flexbox row with two columns */
+.row {
+	display: flex;
+}
+
+.col-text {
+	flex: 3;
+	padding-right: 40px;
+}
+
+.col-image {
+	flex: 2;
+	text-align: center;
+}
+
+.col-image img {
+	border: 1px solid #c9d2e6;
+	border-radius: 10px;
+}
+
+/* ---------- Funding stage cards ---------- */
+.stages {
+	background-color: #eef2f9;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.card {
+	flex: 1 1 180px;
+	background-color: #ffffff;
+	border: 1px solid #c9d2e6;
+	border-top: 6px solid #1f4590;
+	border-radius: 10px;
+	padding: 16px;
+	margin: 8px;
+}
+
+.card h3 {
+	font-size: 18px;
+	margin: 0;
+}
+
+.card p {
+	font-size: 15px;
+	margin-bottom: 0;
+}
+
+/* ---------- Image and text bands ---------- */
+.reverse {
+	background-color: #eef2f9;
+}
+
+/* order puts the image first in this band */
+.reverse .col-image {
+	order: 1;
+}
+
+.reverse .col-text {
+	order: 2;
+	padding-right: 0;
+	padding-left: 40px;
+}
+
+/* ---------- Basic styles for the other two pages
+   (their full layouts come in milestone 7) ---------- */
+main h1 {
+	margin: 40px 40px 0 40px;
+}
+
+aside {
+	padding: 0 40px 40px 40px;
+}
+
+th, td {
+	border: 1px solid #c9d2e6;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #16254f;
+	color: #ffffff;
+}
+
+/* ---------- Footer ---------- */
+footer {
+	background-color: #16254f;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px 40px;
+	font-size: 14px;
+}
+
+/* ---------- Tablet and smaller: stacking navigation,
+   and the flexbox rows stack into one column ---------- */
+@media screen and (max-width: 768px) {
+	nav {
+		display: block;
+		padding: 14px 20px;
+		text-align: center;
+	}
+
+	nav a {
+		display: block;
+		padding: 10px 0;
+	}
+
+	nav span {
+		display: none;
+	}
+
+	header {
+		display: block;
+		padding: 24px 20px;
+	}
+
+	.hero-text {
+		padding-right: 0;
+		margin-bottom: 24px;
+	}
+
+	.hero-text h1 {
+		font-size: 32px;
+	}
+
+	article, .intro {
+		padding: 24px 20px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	.row, .cards {
+		display: block;
+	}
+
+	.col-text, .reverse .col-text {
+		padding-right: 0;
+		padding-left: 0;
+		margin-bottom: 16px;
+	}
+
+	.card {
+		margin: 8px 0;
+	}
+
+	main h1 {
+		margin: 24px 20px 0 20px;
+	}
+
+	aside {
+		padding: 0 20px 24px 20px;
+	}
+}
